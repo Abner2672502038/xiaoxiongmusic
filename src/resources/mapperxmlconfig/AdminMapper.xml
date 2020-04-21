@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hrbust.mapper.AdminMapper">
+    <insert id="addAdmin">
+        insert into admin(account,password) values (#{name},#{password})
+    </insert>
+
+    <select id="selectAdmin" resultType="com.hrbust.bean.Admin">
+        select id,account,password from admin where account=#{param1} and password=#{param2}
+    </select>
+</mapper>

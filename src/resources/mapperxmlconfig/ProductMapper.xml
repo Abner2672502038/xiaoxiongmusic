@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hrbust.mapper.ProductMapper">
+    <resultMap id="productResult" type="com.hrbust.bean.Result">
+        <id property="id" column="id"></id>
+        <result property="songName" column="song_name"></result>
+        <result property="songFile" column="song_File"></result>
+        <result property="introduction" column="introduction"></result>
+        <result property="songKey" column="song_key"></result>
+        <result property="singer" column="singer_name"></result>
+        <association property="classify" javaType="com.hrbust.bean.Classify">
+            <id property="id" column="classify_id"></id>
+            <result property="classifyName" column="classify_name"></result>
+            <result property="updateTime" column="update_time"></result>
+        </association>
+    </resultMap>
+    <insert id="insertProduct">
+        insert into song(song_name,singer_name,classify_id,vip,song_File,picture_file,song_key,introduction) values (#{music_name},#{music_artist},#{music_type},#{music_status},#{music_link},#{s},#{music_key},#{music_title})
+    </insert>
+    <select id="selectClassifyAll" resultType="com.hrbust.bean.Classify">
+        select id,classify_name classifyName,update_time updateTime from classify
+    </select>
+    <select id="selectProductALL" resultMap="productResult">
+        select song.id,song_name,singer_name,classify_id,classify_name,update_time,vip,song_File,song_key,introduction from song,classify where classify_id=classify.id
+    </select>
+</mapper>

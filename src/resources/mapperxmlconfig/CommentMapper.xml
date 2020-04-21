@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hrbust.mapper.CommentMapper">
+    <insert id="insertComment">
+        insert into comment(content,song_id,user_id,commenttime) values (#{commentdata},#{id},#{userId},#{time})
+    </insert>
+    <select id="selectComment" resultType="com.hrbust.bean.Comment">
+        select id,content,song_id songId,user_id userId,commenttime time from comment where song_id=#{id}
+    </select>
+    <select id="selectCommentResult" resultType="com.hrbust.bean.User">
+      select id,user_num account,nickname nickName,user_password password, user_pic picture from user where id=#{pid}
+    </select>
+    <select id="selectCommentAll" resultType="com.hrbust.bean.Comment">
+        select id,content,song_id songId,user_id userId,commenttime time from comment
+    </select>
+</mapper>

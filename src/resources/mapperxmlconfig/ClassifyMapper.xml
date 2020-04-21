@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hrbust.mapper.ClassifyMapper">
+    <insert id="insertClassify">
+        insert into classify(classify_name,update_time) values (#{param1},#{param2})
+    </insert>
+    <update id="updateClassify">
+        update classify set classify_name=#{updateclassify},update_time=#{time} where id=#{id}
+    </update>
+    <delete id="deleteClassify">
+        delete from classify where id=#{id1}
+    </delete>
+    <select id="selectClassify" resultType="com.hrbust.bean.Classify">
+        select id,classify_name classifyName,update_time updateTime from classify
+    </select>
+
+</mapper>

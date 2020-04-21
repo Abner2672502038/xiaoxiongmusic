@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hrbust.mapper.MallMapper">
+    <insert id="insertProduct">
+        insert into product(product_name,product_price,picture_path,product_num,product_status,product_time) values (#{productName},#{productPrice},#{picturePath},#{count1},#{status},#{time1})
+    </insert>
+    <insert id="insertCar">
+        insert into buycar(product_id,buy_count,user_id) values (#{i},#{parseInt},#{id})
+    </insert>
+    <update id="updatepass">
+        update product set product_status='0' where id=#{parseInt}
+    </update>
+    <update id="updatestop">
+        update product set product_status='1' where id=#{parseInt}
+    </update>
+    <update id="updateBuycar">
+        update buycar set buy_count=#{addcount} where product_id=#{i}
+    </update>
+
+    <delete id="deleteproduct">
+        delete from product where id=#{parseInt}
+    </delete>
+    <select id="selectAll" resultType="com.hrbust.bean.MallProduct">
+        select id,product_name productName,product_price productPrice,picture_path picturePath,product_num count1,product_status status,product_time time1 from product
+    </select>
+    <select id="seletctAllByStatus" resultType="com.hrbust.bean.MallProduct">
+        select id,product_name productName,product_price productPrice,picture_path picturePath,product_num count1,product_status status,product_time time1 from product where product_status='0'
+    </select>
+    <select id="selectProductById" resultType="com.hrbust.bean.MallProduct">
+        select id,product_name productName,product_price productPrice,picture_path picturePath,product_num count1,product_status status,product_time time1 from product where id=#{parseInt}
+    </select>
+    <select id="selectBuyCar" resultType="com.hrbust.bean.BuyCar">
+        select id,product_id productId,buy_count buyCount,user_id userId from buycar where user_id=#{id}
+    </select>
+    <select id="selectProduct" resultType="com.hrbust.bean.BuyCar">
+        select id,product_id productId,buy_count buyCount,user_id userId from buycar where product_id=#{id} and user_id=#{userId}
+
+    </select>
+
+</mapper>

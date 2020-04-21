@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hrbust.mapper.HomeMapper">
+    <insert id="insertClicks">
+        insert into clicks(song_count,song_id,classify_id,user_id) values (#{i},#{pid},#{classifyId},#{id})
+    </insert>
+    <update id="updateClickById">
+        update clicks set song_count=#{i} where id=#{id}
+    </update>
+    <select id="selectskipPhoto" resultType="com.hrbust.bean.SkipPhoto">
+        select id,num from skipphoto
+    </select>
+    <select id="selectSongAll" resultType="com.hrbust.bean.Song">
+        select id,song_name songName,singer_name singerName,classify_id classifyId,vip,song_File songFile,picture_file pictureFile,song_key songkey,introduction from song
+    </select>
+    <select id="selectMusicById" resultType="com.hrbust.bean.Music">
+        select id,song_name songName,picture_file songpic,song_File songfile from song where id=#{pid}
+    </select>
+    <select id="selectclickBysongId" resultType="com.hrbust.bean.Clicks">
+        select id,song_count countClick,song_id songId,classify_id classifyId,user_id userId from clicks where song_id=#{pid}
+    </select>
+    <select id="selectMusic" resultType="com.hrbust.bean.Song">
+        select id,song_name songName,singer_name singerName,classify_id classifyId from song where id=#{pid}
+    </select>
+    <select id="selectClicksAll" resultType="com.hrbust.bean.Clicks">
+        select id,song_count countClick,song_id songId,classify_id classifyId,user_id userId from clicks
+    </select>
+    <select id="selectSongById" resultType="com.hrbust.bean.Song">
+        select id,song_name songName,singer_name singerName,classify_id classifyId,vip,song_File songFile,picture_file pictureFile,song_key songkey,introduction from song where id=#{songId}
+
+    </select>
+    <select id="selectMusicById1" resultType="com.hrbust.bean.Music">
+        select id,song_name songName,song_File songfile from soaringlist where id=#{pid}
+    </select>
+</mapper>

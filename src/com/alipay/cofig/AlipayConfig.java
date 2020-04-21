@@ -1,0 +1,21 @@
+package com.alipay.cofig;
+
+public class AlipayConfig {
+    public static String APPID = "2016101300679565";
+    public static String RSA_PRIVATE_KEY = "MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCM8B0MKjG/Yo8eXE+jNlUjyhlblFXioWvtdT6xM6RejbDYDuPpCdAJn9nFhaVowpfpFqu83PTaXwDnSdJHKnBbR+H/D+s70D43LP81+Cd+6h7rAxYMsGnSBKg5QASWIrm25q+ZiSdIyP7OOWEsByD704vkAi+J0zZfXojm49OUnbPGbJgBxOa79hVoyMdW7JN6iy3waqhhYxEJqoXZp23LoFiAbUrDfdMg8ZGxp1OBmyA8GNM7AQTj7VF7CPBW3G0s4D3X2ICXJ5AK9b2xse9JXI0qFMt4URVx6A1mOfJI5xSMCh9Laf9RUAB0qT9c/KewToCTNa/p9d8PNZ65iX9fAgMBAAECggEAPHdDrxVnNHn/dwIZtKc5zdoGGRFB67JfkIfttq62RU664Wc6BqAMHiTzlFerSI+8BueQFL4jWpDJ3XEBg0DE5ZSoc/qLbKUCHD/02l217DBbxW4UhqslK1KOLcm2bgdF8B92lQOP1B1PnIBnnTENyJzQ9qitZo80U6RGTfDOtIJ0FFRp+qW+FhPEEwFSsLfDY0YwlN5m8dxe+SFVElSWC2wc4ElKSV+TYMtMNNwLNeKYbjXgqaSi6ioKdkTiX8e3f3Th240l8KmgPJ7hZ0xzmleeroCnV1Q12cTLmGnwxmjqZh69VVWwhWZXyRzLSsqSD96NxWoS/3HYOFaIheEwSQKBgQDWPkcfbmgpRLDg8dS8vOt0QFuSwKQoWpoL6sOUchSB/Psw/iWlBEq6chluHPx673DBrrqZ4zDSRbw2LMt/ePgCTfalt0vFpFNCcLaxvliwJRYh1gtazbFVbABT/aMjnGJrrDLs6MipZ7f3pUFk4eBxYU8hJqFUhV+1Y20Cth06YwKBgQCoaD9qugYZ4/cFQh+hAOvJ146wZnotGPSf3I11hLsK6L9ITQGP/6BiPMXm7EyE/UtjvmUJGdowkjgqklKYOIejC725cmI7z4it8ojZnhesuFE5+E/br0MwXhan/40U570celRt68RFpoUc6NIvUsSdt4+Kp3GLqXKcjctskH7Z1QKBgFkuyYqC+icbqgmpgWYjulvFIpl/SZZmyLNnQYz8xB6sQaBOWztLAxSDxKQ6ursuCyEE7DZ9BWiykLt4gCmLIKpM6/xlxcv7MJF6vAJXezGv7nudT1K4RzaI48YS0iNTyQCLSROnf0hNnZ4gE428HSL1X+wr2YKGlqW6QrmbN6WDAoGBAJ0wKLlChv1VhbTXwlPyWyMb2yiVjkZXu8UXBMaDLF6DXj9q+SFiNV5cYVAokUe0cNDZ3s5+3eRmJpy91PAWG6w5Ak59EGnJTUcnUUrmQCzMIazdNBTWYv1bZQRMCHBR2XciS3oKDToBss+IFN9s/u5Dbmy528bDU6ICy7Q6rtw9AoGBAJCntos4b6IkYlQpr26897c2qnpzRvQla+KdYsma9xh7PvrCbuLH0gUgEhF7gHIPhY/GpiDecN3hy8xIld8vweMfABo3CGuWp9hjYvIXKrx6iYev+7feLfwax0B1z4TzQ8lRAfPyIg2TjOzGVgM3/OtGt+2btNfQ4UBq7tOjtcOA";
+    public static String notify_url = "http://localhost:8080/mall/notify";
+    public static String return_url = "http://localhost:8080/mall/answer";
+    public static String URL = " https://openapi.alipaydev.com/gateway.do";
+    public static String CHARSET = "UTF-8";
+    public static String FORMAT = "json";
+    public static String ALIPAY_PUBLIC_KEY = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjPAdDCoxv2KPHlxPozZVI8oZW5RV4qFr7XU+sTOkXo2w2A7j6QnQCZ/ZxYWlaMKX6RarvNz02l8A50nSRypwW0fh/w/rO9A+Nyz/Nfgnfuoe6wMWDLBp0gSoOUAEliK5tuavmYknSMj+zjlhLAcg+9OL5AIvidM2X16I5uPTlJ2zxmyYAcTmu/YVaMjHVuyTeost8GqoYWMRCaqF2adty6BYgG1Kw33TIPGRsadTgZsgPBjTOwEE4+1RewjwVtxtLOA919iAlyeQCvW9sbHvSVyNKhTLeFEVcegNZjnySOcUjAofS2n/UVAAdKk/XPynsE6AkzWv6fXfDzWeuYl/XwIDAQAB";
+    public static String log_path = "/log";
+    public static String SIGNTYPE = "RSA2";
+
+
+
+
+
+
+
+}

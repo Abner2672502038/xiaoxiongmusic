@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- 这里面你可以配置一下关于JavaBean中类的一些别名，这样就方便在之后的Mapper文件中进行处理 -->
+    <typeAliases>
+        <package name="com.hrbust.bean"/>
+    </typeAliases>
+</configuration>

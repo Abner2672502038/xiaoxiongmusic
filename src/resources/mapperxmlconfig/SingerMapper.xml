@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hrbust.mapper.SingerMapper">
+    <insert id="insertSinger">
+        insert into singer(singer_name,sex,introduce) values (#{singerName},#{sex},#{introduction})
+    </insert>
+    <delete id="deleteSingerById">
+        delete from singer where id=#{id1}
+    </delete>
+    <select id="selectAll" resultType="com.hrbust.bean.Singer">
+        select id,singer_name singerName,sex,introduce from singer
+    </select>
+</mapper>
